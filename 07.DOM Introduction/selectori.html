@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="heading" class="fancy-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At laudantium eaque saepe deleniti vel esse illum a sunt non ipsa, vitae eveniet itaque fugiat, quae quia ducimus facere pariatur tempora?</p>
+
+    <ul>
+        <li>First list</li>
+        <li class="fancy-text">Second List</li>
+    </ul>
+    <ol>
+        <Li>Other List Item</Li>
+    </ol>
+
+    <script>
+        // get by Id
+        let headingEL = document.getElementById('heading');
+        console.log(headingEL.textContent)
+
+        //get by class name
+        let textElement = document.getElementsByClassName('fancy-text')
+        console.log(textElement);
+
+        //get by tag name
+        let liElements = document.getElementsByTagName('li');
+        console.log(liElements);
+
+        //get one by CSS selector
+        let fancyParagraph = document.querySelector('p.fancy-text');
+        console.log(fancyParagraph);
+
+        //get many by css selector
+        let unorderedLiElements = document.querySelectorAll('ul li');
+        console.log(unorderedLiElements)
+    </script>
+</body>
+
+</html>
