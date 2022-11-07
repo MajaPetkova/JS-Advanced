@@ -14,7 +14,7 @@
         <input
           type="text"
           id="new-task-input"
-          placeholder="What do you have planned"
+          placeholder="What do you have planned?"
         />
         <input type="submit" id="new-task-submit" value="Add Task" />
       </form>
@@ -24,18 +24,28 @@
       <section class="task-list">
         <h2>Tasks</h2>
         <div id="tasks">
+          <div class="task">
             <div class="content">
-                <input type="text" class="text" value="my shiny task" readonly/>
+              <input type="text" class="text" value="My shiny task" readonly />
             </div>
             <div class="actions">
-                <button class="edit">Edit</button>
-                <button class="delete">Delete</button>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
             </div>
+          </div>
+          <div class="task">
+            <div class="content">
+              <input type="text" class="text" value="My shiny task" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    
-    
+
     <script src="index.js"></script>
   </body>
 </html>
