@@ -44,4 +44,22 @@ function onSubmit(e) {
   taskActionsEl.appendChild(editBtnEl);
   taskActionsEl.appendChild(delBtnEl);
   taskElement.appendChild(taskActionsEl);
+  input.value = "";
+
+  editBtnEl.addEventListener("click", onEdit);
+  delBtnEl.addEventListener('click', onDelete);
+
+  function onEdit() {
+    if(editBtnEl.innerText.toLowerCase()== 'edit'){
+        taskInputEl.removeAttribute("readonly");
+        taskInputEl.focus();
+        editBtnEl.innerText = "Save";
+    }else{
+        taskInputEl.setAttribute("readonly", "readonly");
+        editBtnEl.innerText = "Edit";
+    }
+  }
+   function onDelete(){
+   listElement.removeChild(taskElement)
+   }
 }
