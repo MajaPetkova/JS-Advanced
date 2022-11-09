@@ -101,7 +101,7 @@ input[type="checkbox"] {
 .bubble {
   display: flex;
   align-items: center;
-  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 20px;
   border: 2px solid var(--business);
@@ -111,4 +111,45 @@ input[type="checkbox"] {
 .bubble.personal {
   border-color: var(--personal);
   box-shadow: var(--personal-glow);
+}
+.bubble::after{
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    background-color: var(--business);
+    box-shadow: var(--business-glow);
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+.bubble.personal::after{
+    background-color: var(--personal);
+    box-shadow: var(--personal-glow);
+}
+       /* next to */
+input:checked ~ .bubble::after{ 
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+.create-todo .options label div{
+    color: var(--dark);
+    font-size: 1.125rem;
+    margin-top: 1rem;
+}
+.create-todo input[type="submit"]{
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: var(--personal-glow);
+    cursor: pointer;
+    transition:0.2s ease-in-out ;
+}
+.create-todo input[type="submit"]:hover{
+    opacity: 0.75;
 }
