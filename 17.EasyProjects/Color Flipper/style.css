@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav-center {
+  display: flex;
+  background-color: rgb(234, 233, 233);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+  height: 60px;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+}
+h4 {
+  color: rgb(110, 110, 203);
+  font-size: 18px;
+  text-transform: uppercase
+}
+.nav-links li {
+  list-style: none;
+  font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: grey;
+}
+main{
+    margin: 50px 250px;
+}
+.container{
+    margin:0 auto;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+.container .btn{
+border: 3px solid black;
+padding:10px 12px;
+color: black;
+border-radius: 6px;
+font-size: 20px;
+letter-spacing: 1px;
+margin-top: 20px;
+}
