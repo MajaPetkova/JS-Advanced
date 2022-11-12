@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+text-align: center;
+margin-top:150px;
+}
+h1{
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+.button-container .btn{
+    padding:8px 16px;
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.button-container .btn:hover{
+    background-color: black;
+    color: white;
+    transition: 600ms ease-in-out;
+}
