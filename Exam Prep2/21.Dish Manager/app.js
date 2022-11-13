@@ -11,7 +11,7 @@ function solve() {
   const dishesCount = document.getElementById("progress-count");
   let dishesCountNumber = Number(dishesCount.textContent);
   submitBtn.addEventListener("click", onSubmit);
-  
+
   function onSubmit() {
     const firstName = firstNameEl.value.trim();
     const lastName = lastNameEl.value.trim();
@@ -43,6 +43,7 @@ function solve() {
     const editBtn = document.createElement("button");
     editBtn.className = "edit-btn";
     editBtn.textContent = "Edit";
+    editBtn.addEventListener("click", onEdit);
 
     const completeBtn = document.createElement("button");
     completeBtn.className = "complete-btn";
@@ -61,10 +62,23 @@ function solve() {
     lastNameEl.value = "";
     ageEl.value = "";
     descriptionEl.value = "";
-  
+
     // console.log(firstName, lastName, age, description, gender);
     dishesCountNumber++;
-     dishesCount.textContent = dishesCountNumber;
+    dishesCount.textContent = dishesCountNumber;
+
+    function onEdit() {
+      const [x, y] = title.textContent.split(" ");
+      firstNameEl.value = x;
+      lastNameEl.value = y;
+      const [gender, age] = para.textContent.split(", ");
+      ageEl.value = age;
+      genderEl.value = gender;
+      descriptionEl.value= desc.textContent;
+
+      manager.remove();
+      dishesCount.textContent= dishesCountNumber-1;
+    }
   }
   // function e(type, attr, ...content) {
   //   const element = document.createElement(type);
