@@ -9,6 +9,8 @@ function solve() {
   const submitBtn = document.getElementById("form-btn");
   const inProgress = document.getElementById("in-progress");
   const dishesCount = document.getElementById("progress-count");
+  const finishedEl= document.getElementById('finished');
+  const clearBtn= document.getElementById('clear-btn');
   let dishesCountNumber = Number(dishesCount.textContent);
   submitBtn.addEventListener("click", onSubmit);
 
@@ -48,6 +50,7 @@ function solve() {
     const completeBtn = document.createElement("button");
     completeBtn.className = "complete-btn";
     completeBtn.textContent = "Mark as complete";
+    completeBtn.addEventListener('click', onComplete);
 
     manager.appendChild(article);
     article.appendChild(title);
@@ -66,6 +69,7 @@ function solve() {
     // console.log(firstName, lastName, age, description, gender);
     dishesCountNumber++;
     dishesCount.textContent = dishesCountNumber;
+    console.log(dishesCountNumber)
 
     function onEdit() {
       const [x, y] = title.textContent.split(" ");
@@ -75,10 +79,22 @@ function solve() {
       ageEl.value = age;
       genderEl.value = gender;
       descriptionEl.value= desc.textContent;
-
       manager.remove();
-      dishesCount.textContent= dishesCountNumber-1;
+      dishesCountNumber--
+      dishesCount.textContent= dishesCountNumber;
+      
     }
+
+    function onComplete(){
+      
+      manager.removeChild(editBtn);
+      manager.removeChild(completeBtn);
+      finishedEl.appendChild(manager);
+
+     dishesCountNumber--
+     dishesCount.textContent= dishesCountNumber;
+    }
+    f
   }
   // function e(type, attr, ...content) {
   //   const element = document.createElement(type);
