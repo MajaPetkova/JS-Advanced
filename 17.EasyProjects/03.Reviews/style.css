@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.container {
+  margin: 200px;
+  text-align: center;
+}
+.container .title {
+  font-size: 22px;
+  color: black;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.title .underline {
+  margin-top: 10px;
+  width: 55px;
+  height: 4px;
+  background-color: rgb(116, 162, 219);
+  margin-left: auto;
+  margin-right: auto;
+}
+.review {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.75);
+}
+.review #person-img {
+  border-radius: 50%;
+  box-shadow: 11px -11px 14px 0px rgb(116, 162, 219);
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 150px;
+  height: 100px;
+}
+.review #author{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.review #job{
+    color: rgb(116, 162, 219);
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.review #info{
+margin: 0 35px
+}
