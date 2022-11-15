@@ -55,3 +55,25 @@ body{
 .review #info{
 margin: 0 35px
 }
+.btn-container{
+display: flex;
+gap:40px;
+justify-content: center;
+margin-top: 20px;
+}
+.prev, .next{
+    color:rgb(116, 162, 219);
+    font-size: 22px;
+    background-color: white;
+    border: none;
+    
+}
+.random{
+    border: 1px solid rgb(116, 162, 219);
+    color:rgb(116, 162, 219);
+    background-color: rgb(206, 212, 220);
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin-top: 10px;
+    font-weight: 600;
+}
