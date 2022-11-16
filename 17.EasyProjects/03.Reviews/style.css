@@ -61,14 +61,14 @@ gap:40px;
 justify-content: center;
 margin-top: 20px;
 }
-.prev, .next{
+.prev-btn, .next-btn{
     color:rgb(116, 162, 219);
     font-size: 22px;
     background-color: white;
     border: none;
     
 }
-.random{
+.random-btn{
     border: 1px solid rgb(116, 162, 219);
     color:rgb(116, 162, 219);
     background-color: rgb(206, 212, 220);
