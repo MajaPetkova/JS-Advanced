@@ -1,12 +1,12 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body{
-    font-family: 'Courier New', Courier, monospace;
+body {
+  font-family: "Courier New", Courier, monospace;
 }
 .container {
   margin: 200px;
@@ -42,38 +42,38 @@ body{
   width: 150px;
   height: 100px;
 }
-.review #author{
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 5px;
+.review #author {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
-.review #job{
-    color: rgb(116, 162, 219);
-    font-weight: 400;
-    margin-bottom: 5px;
+.review #job {
+  color: rgb(116, 162, 219);
+  font-weight: 400;
+  margin-bottom: 5px;
 }
-.review #info{
-margin: 0 35px
+.review #info {
+  margin: 0 35px;
 }
-.btn-container{
-display: flex;
-gap:40px;
-justify-content: center;
-margin-top: 20px;
+.btn-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 20px;
 }
-.prev-btn, .next-btn{
-    color:rgb(116, 162, 219);
-    font-size: 22px;
-    background-color: white;
-    border: none;
-    
+.prev-btn,
+.next-btn {
+  color: rgb(116, 162, 219);
+  font-size: 22px;
+  background-color: white;
+  border: none;
 }
-.random-btn{
-    border: 1px solid rgb(116, 162, 219);
-    color:rgb(116, 162, 219);
-    background-color: rgb(206, 212, 220);
-    border-radius: 8px;
-    padding: 6px 12px;
-    margin-top: 10px;
-    font-weight: 600;
+#random {
+  border: 1px solid rgb(116, 162, 219);
+  color: rgb(116, 162, 219);
+  background-color: rgb(206, 212, 220);
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin-top: 10px;
+  font-weight: 600;
 }
