@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Sono:wght@200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Sono:wght@200;300;400;500&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,52 +17,67 @@ body {
   font-family: "Dancing Script";
   font-size: 35px;
   margin-bottom: 70px;
-  
 }
-.question{
-    background-color: white;
-    margin-bottom: 30px;
-    border-color: transparent;
-    border-radius: 6px;
+.question {
+  background-color: white;
+  margin-bottom: 30px;
+  border-color: transparent;
+  border-radius: 6px;
   margin-left: 200px;
-margin-right: 200px;
+  margin-right: 200px;
 }
-.question .question-title{
-letter-spacing: 1px;
-text-transform: capitalize;
-font-family: "Sono";
-padding-left: 10px;
-top: 10px;
-display: flex;
-justify-content: space-between;
-padding-right: 20px;
-padding-left: 20px;
-padding-top: 30px;
+.question .question-title {
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-family: "Sono";
+  padding-left: 10px;
+  top: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.question-btn{
-display: flex;
-flex-direction: column;
-gap:10px;
-background-color: white;
-color: rgb(199, 173, 29);
-border: none;
-
+.question-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  color: rgb(199, 173, 29);
+  border: none;
 }
-.question-text{
-    padding-bottom:30px;
-    padding-left: 20px;
-    border-top:solid rgb(167, 166, 166) 1px;
-    width: 90%;
-   margin-left:auto;
-   margin-right: auto;
-   margin-top: 10px;
-   padding-top: 20px;
-   color:rgb(167, 166, 166) 
+.question-text {
+  padding-bottom: 30px;
+  padding-left: 20px;
+  border-top: solid rgb(167, 166, 166) 1px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-top: 20px;
+  color: rgb(167, 166, 166);
 }
 
 .plus-icon .far.fa-plus-square,
-.far.fa-minus-square{
-    font-size:24px;
-background-color: white;
-border: 5px
+.far.fa-minus-square {
+  font-size: 24px;
+  background-color: white;
+  border: 5px;
+}
+
+.question-text{
+    display: none;
+}
+.show-text .question-text{
+    display: block;
+}
+.minus-icon{
+    display: none;
+}
+.show-text .minus-icon{
+    display: inline;
+}
+.show-text .plus-icon{
+    display: none;
 }
