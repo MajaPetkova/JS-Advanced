@@ -49,8 +49,7 @@ const menu = [
 ];
 
 const sectionCenter = document.querySelector(".section-center");
-const filterBtn = document.querySelectorAll(".filter-btn");
-const btnContainer= document.querySelector('.btn-container')
+const btnContainer = document.querySelector(".btn-container");
 
 window.addEventListener("DOMContentLoaded", onLoad);
 
@@ -58,16 +57,49 @@ window.addEventListener("DOMContentLoaded", onLoad);
 function onLoad() {
   displayMenuItems(menu);
 
-  const categories = menu.reduce((values, item) => {
-    if(!values.includes(item.category)){
-        values.push(item.category)
+  const categories = menu.reduce(
+    (values, item) => {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ["all"]
+  );
+  const categoryBtn = categories
+    .map((x) => {
+      return `<button class="filter-btn" type="button" data-id="${x}">${x}</button>`;
+    })
+    .join("");
+  btnContainer.innerHTML = categoryBtn;
+  const filterBtn = document.querySelectorAll(".filter-btn");
+
+  // filter Items
+
+  filterBtn.forEach((x) => {
+    x.addEventListener("click", onFilter);
+  });
+
+  function onFilter(e) {
+    const category = e.currentTarget.dataset.id;
+
+    const menuCategory = menu.filter(function (menuItems) {
+      if (menuItems.category == category) {
+        return menuItems;
+      }
+    });
+    if (category == "all") {
+      displayMenuItems(menu);
+    } else if (category == "breakfast") {
+      displayMenuItems(menuCategory);
+    } else if (category == "lunch") {
+      displayMenuItems(menuCategory);
+    } else if (category == "shakes") {
+      displayMenuItems(menuCategory);
+    } else if (category == "dinner") {
+      displayMenuItems(menuCategory);
     }
-    return values
-  }, ["all"]);
-  const categoryBtn=categories.map(x =>{
-    return `<button class="filter-btn" type="button" data-id="${x}">${x}</button>`
-  })
-  btnContainer.innerHTML = categoryBtn.join('')
+  }
 }
 
 function displayMenuItems(menuItems) {
@@ -85,30 +117,4 @@ function displayMenuItems(menuItems) {
   });
   displayMenu = displayMenu.join("");
   sectionCenter.innerHTML = displayMenu;
-}
-
-// filter Items
-filterBtn.forEach((x) => {
-  x.addEventListener("click", onFilter);
-});
-
-function onFilter(e) {
-  const category = e.currentTarget.dataset.id;
-
-  const menuCategory = menu.filter(function (menuItems) {
-    if (menuItems.category == category) {
-      return menuItems;
-    }
-  });
-  if (category == "all") {
-    displayMenuItems(menu);
-  } else if (category == "breakfast") {
-    displayMenuItems(menuCategory);
-  } else if (category == "lunch") {
-    displayMenuItems(menuCategory);
-  } else if (category == "shakes") {
-    displayMenuItems(menuCategory);
-  } else if (category == "dinner") {
-    displayMenuItems(menuCategory);
-  }
 }
