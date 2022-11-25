@@ -92,7 +92,35 @@ a {
     background: white;
     color: black;
   }
-
+  .section {
+    padding-bottom: 80px;
+  }
+  
+  .section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+  /* main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  } */
+  .title h2 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .title span {
+    color:green;
+  }
+  #about,
+  #services,
+  #tours {
+    height: 100vh;
+  }
+  #services {
+    background: white;
+  }
   footer {
     background-color: black;
     padding: 68px 16px;
@@ -117,7 +145,7 @@ a {
     border-radius: 6px;
     color: white;
     animation: bounce 2s ease-in-out infinite;
-    /* visibility: hidden; */
+    visibility: hidden;
     /* z-index: -100; */
   }
   .show-link {
