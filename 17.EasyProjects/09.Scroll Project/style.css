@@ -8,7 +8,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Verdana, sans-serif;
 }
-@media screen and (max-width: 1440px) {
+a {
+  text-decoration: none;
+}
+@media screen and (max-width: 1940px) {
   .nav-center {
     display: flex;
     justify-content: space-between;
@@ -59,16 +62,78 @@
   .container p {
     color: rgb(234, 234, 234);
     font-size: 18px;
+    margin-bottom: 20px;
   }
+  .btn {
+    text-transform: uppercase;
+    background: transparent;
+    color: black;
+    padding: 6px 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: all 0.3s linear;
+    font-size: 18px;
+    border: 2px solid black;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+  }
+  .btn:hover {
+    color: white;
+    background: black;
+  }
+  .btn-white {
+    color: white;
+    border-color: white;
+    border-radius: 0;
+    padding: 8px 16px;
+  }
+  .btn:hover {
+    background: white;
+    color: black;
+  }
+
+  footer {
+    background-color: black;
+    padding: 68px 16px;
+  }
+  footer p {
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+  }
+  .top-link {
+    font-size: 18px;
+    position: fixed;
+    bottom: 24px;
+    right: 48px;
+    background: rgb(48, 173, 48);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    color: white;
+    animation: bounce 2s ease-in-out infinite;
+    /* visibility: hidden; */
+    /* z-index: -100; */
+  }
+  .show-link {
+    visibility: visible;
+    /* z-index: 100; */
+  }
+  
 }
 
 @media screen and (max-width: 600px) {
   .nav-header {
     display: flex;
     /* justify-content:center; */
-  
   }
   .nav-toggle {
+    margin-right: -400px;
     width: 40px;
     font-size: 36px;
     border: none;
@@ -76,10 +141,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: auto;
-    /* margin-left: auto; */
   }
   .links-container .links {
     display: none;
+  }
+  .container p {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
