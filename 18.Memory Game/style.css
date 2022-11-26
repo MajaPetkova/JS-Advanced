@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background-color: rgb(127, 150, 255);
+}
+img {
+  height: 150px;
+  width: 150px;
+}
+.memory-game {
+  width: 780px;
+  height: 780px;
+  border: 2px solid lime;
+  display: flex;
+  flex-wrap: wrap;
+}
+.memory-card {
+  border: 2px solid aqua;
+  width: 25%;
+  height: 33.3333%;
+}
+.front-face,
+.back-face {
+  border: 2px solid deeppink;
+}
