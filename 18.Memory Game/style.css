@@ -18,10 +18,11 @@ body {
 .memory-game {
   width: 775px;
   height: 775px;
-  border: 2px solid lime;
+  /* border: 2px solid lime; */
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  perspective: 1000px;
 }
 .memory-card {
   margin: 2px;
@@ -29,13 +30,28 @@ body {
   width: calc(25% - 4px);
   height: calc(33.3333% - 4px);
   position: relative;
+  transform: scale(1);
+  transform-style:preserve-3d ;
+  transition: transform 0.5s;
+}
+.memory-card:active{
+    transform: scale(0.97);
+    transition:transform 0.2s
+}
+.memory-card.flip{
+    transform: rotateY(180deg);
 }
 .front-face,
 .back-face {
+  border-radius: 6px;
   width: 100%;
   height: 100%;
   padding: 20px;
   position: absolute;
-  border: 2px solid deeppink;
+  /* border: 2px solid deeppink; */
   background-color: rgb(92, 92, 92);
+  backface-visibility: hidden;
+}
+.front-face{
+  transform: rotateY(180deg);  
 }
