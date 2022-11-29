@@ -5,6 +5,7 @@ function solve() {
   const addBtn = document.getElementById("add");
   const mailListEl = document.getElementById("list");
   const resetBtn = document.getElementById("reset");
+  //   const sendBtn = document.getElementById("send");
 
   addBtn.addEventListener("click", addMail);
   function addMail(e) {
@@ -31,6 +32,8 @@ function solve() {
     listActions.className = "list-action";
 
     const sendBtn = document.createElement("button");
+    sendBtn.setAttribute("id", "send");
+    sendBtn.setAttribute("type", "submit");
     sendBtn.textContent = "Send";
 
     const deleteBtn = document.createElement("button");
@@ -44,13 +47,41 @@ function solve() {
     listActions.appendChild(deleteBtn);
     mailListEl.appendChild(liEl);
     // console.log(recipient, title,message)
+    const sendBtnEl = document.getElementById("send");
+    // console.log(sendBtnEl);
+    sendBtnEl.addEventListener("click", onSend) ;
+    
+    function onSend(){
+      const sendListMails = document.querySelector(".sent-list");
+      const liElementSend = document.createElement("li");
+
+      const spanEl = document.createElement("span");
+      spanEl.innerHTML = `To: ${recipient}`;
+
+      const spanElTitle = document.createElement("span");
+      spanElTitle.innerHTML = `Title: ${title}`;
+
+      const div = document.createElement("div");
+      div.className = "btn";
+
+      const btn = document.createElement("button");
+      btn.textContent = "Delete";
+
+      liElementSend.appendChild(spanEl);
+      liElementSend.appendChild(spanElTitle);
+      liElementSend.appendChild(div);
+      div.appendChild(btn);
+      sendListMails.appendChild(liElementSend);
+      liEl.remove()
+
+    };
   }
-  resetBtn.addEventListener('click', resetForm);
-  function resetForm(e){
+  resetBtn.addEventListener("click", resetForm);
+  function resetForm(e) {
     e.preventDefault();
-    recipientEl.value='';
-    titleEl.value='';
-    messageEl.value='';
+    recipientEl.value = "";
+    titleEl.value = "";
+    messageEl.value = "";
   }
 }
 solve();
