@@ -14,7 +14,7 @@ function solve() {
     const title = titleEl.value.trim();
     const message = messageEl.value.trim();
 
-    if (recipient == "" || title == "" || message == "") {
+    if (recipient == "" && title == "" && message == "") {
       return;
     }
     const liEl = document.createElement("li");
@@ -69,12 +69,16 @@ function solve() {
     listActions.appendChild(sendBtn);
     listActions.appendChild(deleteBtn1);
     mailListEl.appendChild(liEl);
+    recipientEl.value = "";
+    titleEl.value = "";
+    messageEl.value = "";
     // console.log(recipient, title,message)
-    const sendBtnEl = document.getElementById("send");
+    // const sendBtnEl = document.getElementById("send");
     // console.log(sendBtnEl);
-    sendBtnEl.addEventListener("click", onSend);
+    sendBtn.addEventListener("click", onSend);
 
-    function onSend() {
+    function onSend(e) {
+        console.log(e.target.parentElement)
       const sendListMails = document.querySelector(".sent-list");
       const liElementSend = document.createElement("li");
 
@@ -87,7 +91,8 @@ function solve() {
       const div = document.createElement("div");
       div.className = "btn";
 
-      const btn = document.createElement("button");
+      const btn = document.createElement("button")
+      btn.className='btn';
       btn.setAttribute("id", "delete");
       btn.setAttribute("type", "submit");
       btn.textContent = "Delete";
@@ -97,7 +102,7 @@ function solve() {
       liElementSend.appendChild(div);
       div.appendChild(btn);
       sendListMails.appendChild(liElementSend);
-      liEl.remove();
+      e.target.parentElement.parentElement.remove();
 
       btn.addEventListener("click", onDelete);
 
