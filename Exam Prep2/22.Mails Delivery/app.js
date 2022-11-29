@@ -36,22 +36,45 @@ function solve() {
     sendBtn.setAttribute("type", "submit");
     sendBtn.textContent = "Send";
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
+
+    const deleteBtn1 = document.createElement("button");
+    deleteBtn1.setAttribute("id", "delete");
+    deleteBtn1.setAttribute("type", "submit");
+    deleteBtn1.textContent = "Delete";
+    
+    deleteBtn1.addEventListener('click', onDelete1)
+    
+    function onDelete1() {
+        const deleteList = document.querySelector(".delete-list");
+
+        const liElementDeleted = document.createElement("li");
+
+        const spanElDel = document.createElement("span");
+        spanElDel.innerHTML = `To: ${recipient}`;
+
+        const spanELTitle = document.createElement("span");
+        spanELTitle.innerHTML = `Title: ${title}`;
+
+        liElementDeleted.appendChild(spanElDel);
+        liElementDeleted.appendChild(spanELTitle);
+
+        deleteList.appendChild(liElementDeleted);
+        liEl.remove();
+      }
 
     liEl.appendChild(titleElement);
     liEl.appendChild(recipientName);
     liEl.appendChild(messageSpanEl);
     liEl.appendChild(listActions);
     listActions.appendChild(sendBtn);
-    listActions.appendChild(deleteBtn);
+    listActions.appendChild(deleteBtn1);
     mailListEl.appendChild(liEl);
     // console.log(recipient, title,message)
     const sendBtnEl = document.getElementById("send");
     // console.log(sendBtnEl);
-    sendBtnEl.addEventListener("click", onSend) ;
-    
-    function onSend(){
+    sendBtnEl.addEventListener("click", onSend);
+
+    function onSend() {
       const sendListMails = document.querySelector(".sent-list");
       const liElementSend = document.createElement("li");
 
@@ -65,6 +88,8 @@ function solve() {
       div.className = "btn";
 
       const btn = document.createElement("button");
+      btn.setAttribute("id", "delete");
+      btn.setAttribute("type", "submit");
       btn.textContent = "Delete";
 
       liElementSend.appendChild(spanEl);
@@ -72,9 +97,28 @@ function solve() {
       liElementSend.appendChild(div);
       div.appendChild(btn);
       sendListMails.appendChild(liElementSend);
-      liEl.remove()
+      liEl.remove();
 
-    };
+      btn.addEventListener("click", onDelete);
+
+      function onDelete() {
+        const deleteList = document.querySelector(".delete-list");
+
+        const liElementDeleted = document.createElement("li");
+
+        const spanElDel = document.createElement("span");
+        spanElDel.innerHTML = `To: ${recipient}`;
+
+        const spanELTitle = document.createElement("span");
+        spanELTitle.innerHTML = `Title: ${title}`;
+
+        liElementDeleted.appendChild(spanElDel);
+        liElementDeleted.appendChild(spanELTitle);
+
+        deleteList.appendChild(liElementDeleted);
+        liElementSend.remove();
+      }
+    }
   }
   resetBtn.addEventListener("click", resetForm);
   function resetForm(e) {
