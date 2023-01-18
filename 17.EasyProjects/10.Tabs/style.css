@@ -21,7 +21,6 @@ img {
   margin-top: 60px;
   display: flex;
   justify-content: center;
- 
 }
 .btn-container {
   /* background-color: rgb(186, 210, 210); */
@@ -30,34 +29,34 @@ img {
   display: flex;
   justify-content: space-around;
 }
-button {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+.tab-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   border: 1px solid black;
   padding: 0 43px;
   background-color: rgb(186, 210, 210);
   font-weight: bold;
   color: rgb(77, 76, 76);
 }
-button:hover{
-cursor: pointer;
+.tab-btn.active{
     background-color: rgb(234, 234, 234);
-
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(234, 234, 234);
 }
 .content.active {
-    display:block;
-    background-color: rgb(234, 234, 234);
-    padding-top: 10px;
-    /* margin-top: 10px; */
-    /* padding: 0 50px; */
+  display: block;
+  background-color: rgb(234, 234, 234);
+  padding-top: 10px;
+  /* margin-top: 10px; */
+  /* padding: 0 50px; */
 }
 .content h4 {
   text-align: left;
   padding-bottom: 20px;
   margin-left: 20px;
-  
 }
 ul {
   text-align: left;
