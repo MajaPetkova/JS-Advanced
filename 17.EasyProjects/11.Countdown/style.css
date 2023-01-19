@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin-top: 36px;
+    text-align: center;
+}
+h1{
+    margin-bottom: 36px;
+}
+.section-center{
+    max-width: 900px;
+    display:flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap:20px
+}
+img{
+    width: 400px;
+    border-radius: 6px;
+}
+.gift-info h3{
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 22px;
+    color: rgb(62, 117, 131);
+}
+.gift-info h4{
+    color: rgb(79, 76, 76);
+    margin-bottom: 10px;
+}
+.gift-info p{
+color: rgb(139, 130, 130);
+}
+.deadline{
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+   gap:20px;
+}
+.deadline-format{
+    width: 65px;
+    height: 60px;
+    border: 1px solid black;
+    padding: 6px 0 0 0 ;
+    background-color: black;
+}
+.deadline-format h4{
+font-size: 24px;
+font-weight: 900;
+margin-bottom: -2px;
+color: white;
+}
+.deadline-format span{
+    font-size: 12px;
+    color: white;
+}
