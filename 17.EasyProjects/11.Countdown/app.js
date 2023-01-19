@@ -13,13 +13,13 @@ const months = [
   "December",
 ];
 const weekdays = [
+  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday",
-  "Sunday",
+  "Saturday"
 ];
 const giveaway = document.querySelector(".giveaway");
 const deadline = document.querySelector(".deadline");
@@ -27,11 +27,17 @@ const items = document.querySelectorAll(".deadline-format h4");
 // const currentDate= new Date();
 const futureDate = new Date(2023, 07, 27, 8, 30, 00);
 const year= futureDate.getFullYear();
-const month= months[7];
-const day= futureDate.getDate();
-const dayOfWeek=weekdays[6];
 const hours= futureDate.getHours();
 const minutes= futureDate.getMinutes();
+
+const day= futureDate.getDate();
+
+let month= futureDate.getMonth();
+month= months[month];
+
+let dayOfWeek = futureDate.getDay();
+dayOfWeek = weekdays[dayOfWeek];
+
 giveaway.textContent= `Giveaway ends on ${dayOfWeek}, ${day} ${month} ${year}, ${hours}:${minutes}am`
 
-
+console.log(dayOfWeek)
