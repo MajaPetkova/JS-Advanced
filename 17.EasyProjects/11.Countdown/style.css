@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-body{
+body{background-color:rgb(204, 220, 226);
     margin-top: 36px;
     text-align: center;
 }
@@ -28,11 +28,11 @@ img{
     color: rgb(62, 117, 131);
 }
 .gift-info h4{
-    color: rgb(79, 76, 76);
+    color: rgb(82, 80, 80);
     margin-bottom: 10px;
 }
 .gift-info p{
-color: rgb(139, 130, 130);
+color: rgb(113, 112, 112);
 }
 .deadline{
     margin-top: 36px;
